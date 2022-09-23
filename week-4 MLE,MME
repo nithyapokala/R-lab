@@ -30,3 +30,20 @@ pg no 26,27,28,29,30,31,32,33 from r lab manual
 > d=mean(r)/100
 > d
 [1] 0.5037
+
+
+##testing of hypothesis
+#x=20,n=500,p=3%
+> p=prop.test(20,500,0.03,alternative='two.sided')
+> p
+
+        1-sample proportions test with continuity correction
+
+data:  20 out of 500, null probability 0.03
+X-squared = 1.3918, df = 1, p-value = 0.2381
+alternative hypothesis: true p is not equal to 0.03
+95 percent confidence interval:
+ 0.02524906 0.06216390
+sample estimates:
+   p 
+0.04 
