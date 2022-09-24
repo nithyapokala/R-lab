@@ -47,3 +47,69 @@ alternative hypothesis: true p is not equal to 0.03
 sample estimates:
    p 
 0.04 
+#conclusion:------------------------------
+# p=0.2381
+# p>0.05
+# Ho is accepted
+
+
+
+# male,female,cancer
+> p=prop.test(95,160,0.5,alternative='greater')
+> p
+
+        1-sample proportions test with continuity correction
+
+data:  95 out of 160, null probability 0.5
+X-squared = 5.2562, df = 1, p-value = 0.01093
+alternative hypothesis: true p is greater than 0.5
+95 percent confidence interval:
+ 0.5256923 1.0000000
+sample estimates:
+      p 
+0.59375 
+#conclusion:------------------------------
+# p=0.01093
+# p<0.05
+# Ho is rejected 
+
+
+
+#2-proportions of z-test
+#example-1
+> u=prop.test(c(20,115),c(900,1600),p=NULL,alternative='two.sided')
+> u
+
+        2-sample test for equality of proportions with continuity correction
+
+data:  c(20, 115) out of c(900, 1600)
+X-squared = 26.835, df = 1, p-value = 2.216e-07
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.06642383 -0.03288172
+sample estimates:
+    prop 1     prop 2 
+0.02222222 0.07187500 
+#conclusion:------------------------------
+# p=2.216e-07
+# p<0.05
+# Ho is rejected
+
+#example 2 
+> x=prop.test(c(490,400),c(500,500),p=NULL,alternative='two.sided')
+> x
+
+        2-sample test for equality of proportions with continuity correction
+
+data:  c(490, 400) out of c(500, 500)
+X-squared = 80.909, df = 1, p-value < 2.2e-16
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ 0.1408536 0.2191464
+sample estimates:
+prop 1 prop 2 
+  0.98   0.80 
+#conclusion:------------------------------
+# p=2.2e-16
+# p<0.05
+# Ho is rejected
