@@ -1,0 +1,27 @@
+#GIVEN DATA
+# before training   12   14   11   8   7   10   3   0   5   6
+# after training    15   16   10   7   5   12   10  2   3   8
+#find training is effective or not
+------------
+#R code
+> t.test(c(12,14,11,8,7,10,3,0,5,6),c(15,16,10,7,5,12,10,2,3,8),paired='TRUE',alternative='two.sided')
+
+#output
+--------------
+	Paired t-test
+
+data:  c(12, 14, 11, 8, 7, 10, 3, 0, 5, 6) and c(15, 16, 10, 7, 5, 12, 10, 2, 3, 8)
+t = -1.3646, df = 9, p-value = 0.2055
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -3.1893268  0.7893268
+sample estimates:
+mean difference 
+           -1.2
+#conclusion
+  p=0.2055
+  alpha=0.05
+  p>alpha
+  H0 is accepted
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
