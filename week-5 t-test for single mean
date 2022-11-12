@@ -1,0 +1,24 @@
+#GIVEN DATA no of sample 8 ; data=12.1,11.9,12.4,12.3,11.5,11.6,12.1,12.4 ; average =12.35 ; sample indicate 1%
+
+> t.test(c(12.1,11.9,12.4,12.3,11.5,11.6,12.1,12.4),mu=12.35,alternative = 'two.sided')
+
+#output
+-------------
+	One Sample t-test
+
+data:  c(12.1, 11.9, 12.4, 12.3, 11.5, 11.6, 12.1, 12.4)
+t = -2.5535, df = 7, p-value = 0.03791
+alternative hypothesis: true mean is not equal to 12.35
+95 percent confidence interval:
+ 11.74811 12.32689
+sample estimates:
+mean of x 
+  12.0375 
+  
+  #conclusion
+        p=0.03791
+        alpha=0.01
+        p>alpha
+        H0 is accepted
+ ------------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------
