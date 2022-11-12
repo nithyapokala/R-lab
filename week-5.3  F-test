@@ -1,0 +1,36 @@
+#GIVEN DATA two horses A,B find wheter the two horses have variance or not
+# horse A    28   30   32   33   33   29   34
+#horse B     29   30   30   24   27   29   -
+
+#F-test is used to find wheter 2 sample's have same variance or not at level 5%
+
+#R code
+
+> x=c(28,30,32,33,33,29,34)
+> y=c(29,30,30,24,27,29)
+> var.test(x,y,alternative='two.sided')
+
+#output
+-----------------
+	F test to compare two variances
+
+data:  x and y
+F = 0.97604, num df = 6, denom df = 5, p-value = 0.9573
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.1398802 5.8441186
+sample estimates:
+ratio of variances 
+         0.9760426 
+ 
+ #conclusion
+    p=0.9573
+    alpha=0.05
+    p>alpha
+    H0 is accepted
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
