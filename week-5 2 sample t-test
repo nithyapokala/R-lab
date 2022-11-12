@@ -1,0 +1,31 @@
+#GIVEN DATA two horses A,B find wheter the two horses have same running capacity or not
+# horse A    28   30   32   33   33   29   34
+#horse B     29   30   30   24   27   29   -
+
+
+#R code
+
+> x=c(28,30,32,33,33,29,34)
+> y=c(29,30,30,24,27,29)
+> t.test(x,y,alternative='two.sided')
+
+#output
+-----------------
+	Welch Two Sample t-test
+
+data:  x and y
+t = 2.4335, df = 10.652, p-value = 0.03386
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.2867853 5.9513100
+sample estimates:
+mean of x mean of y 
+ 31.28571  28.16667 
+ 
+ #conclusion
+    p=0.03386
+    alpha=0.05
+    p<alpha
+    H0 is rejected
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
