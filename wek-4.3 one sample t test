@@ -1,0 +1,28 @@
+#n=20, mean=100, standard deviation=15
+#rcode
+> library(BSDA)
+> r=rnorm(20,100,15)
+> y=t.test(r,alternative='two.sided',mu=100,sigma.x=15)
+> y
+
+
+#output
+------------
+	One Sample t-test
+
+data:  r
+t = 1.2855, df = 19, p-value = 0.2141
+alternative hypothesis: true mean is not equal to 100
+95 percent confidence interval:
+  97.18824 111.76388
+sample estimates:
+mean of x 
+ 104.4761 
+ 
+ #conclusion
+ p=0.2141   ,  alpha=0.05
+   p>alpha
+        H0 is accepted
+ ----------------------------------------------------------------------
+ ----------------------------------------------------------------------
+ 
