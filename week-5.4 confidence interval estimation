@@ -1,0 +1,16 @@
+#question :- mean=200,sd=12,n=30.find confidence interval at t=0.05 
+----------------------------------------------------------------------------
+#rcode
+
+> n=30
+> x=200
+> s=12
+> o=qt(0.975,df=n-1)*s/sqrt(n)                       #qt is used to return the inverse probability cummilative density
+> upperlimit=x+o
+> lowerlimit=x-o
+> lowerlimit
+[1] 195.5191
+> upperlimit
+[1] 204.4809
+> 
+------------------------------------------
