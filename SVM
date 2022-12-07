@@ -1,0 +1,12 @@
+'''
+ find support vectors and svm classification plot for n=40,2columns
+ '''
+install.packages("e1071")
+library(e1071)
+set.seed(10111)
+x=matrix(rnorm(40),20,2)
+y=rep(c(-1,1),c(10,10))
+x[y==1,]=x[y==1,]+1
+dat=data.frame(x,y=as.factor(y))
+svm=svm(y~.,data=dat,kernal="linear")
+plot(svm,dat)
