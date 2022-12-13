@@ -1,0 +1,48 @@
+> getwd()
+[1] "C:/Users/gowth/OneDrive/Documents"
+> library(readr)
+> nit <- read_csv("nit.csv")
+Rows: 8 Columns: 3                                                      
+── Column specification ────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): rno, marks, att
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> View(nit)
+> p=prcomp(nit[2:3],scale=T)
+> summary(p)
+Importance of components:
+                          PC1    PC2
+Standard deviation     1.2732 0.6157
+Proportion of Variance 0.8105 0.1895
+Cumulative Proportion  0.8105 1.0000
+> library("factoextra")
+> fviz_nbclust(nit[2:3],kmeans,method="wss",kmax=3)
+Error in FUNcluster(x, i, ...) : unused argument (kmax = 3)
+> fviz_nbclust(nit[2:3],kmeans,method="wss",k.max=3)
+> clust=kmeans(nit[2:3],2)
+> clust
+K-means clustering with 2 clusters of sizes 4, 4
+
+Cluster means:
+  marks  att
+1 91.25 35.5
+2 31.75 70.0
+
+Clustering vector:
+[1] 1 2 1 1 2 2 1 2
+
+Within cluster sum of squares by cluster:
+[1]  553.75 2312.75
+ (between_SS / total_SS =  76.7 %)
+
+Available components:
+
+[1] "cluster"      "centers"      "totss"        "withinss"    
+[5] "tot.withinss" "betweenss"    "size"         "iter"        
+[9] "ifault"      
+> fviz_cluster(nit[2:3],clust)
+Error in fviz_cluster(nit[2:3], clust) : 
+  Can't handle an object of class tbl_dftbldata.frame
+> fviz_cluster(clust,nit[2:3])
